@@ -44,7 +44,18 @@ class MyHomePage extends StatelessWidget {
             width: double.infinity,
             child: Card(
               color: Colors.blue,
-              child: Text('CHART!'),
+//              child: Text('CHART!'),
+              child: InkWell(
+                splashColor: Colors.blue.withAlpha(30),
+                onTap: () {
+                  print('Card tapped, not a beer');
+                },
+                child: Container(
+                  width: 300,
+                  height: 100,
+                  child: Text('Card sez - Tap Me!'),
+                ),
+              ),
               elevation: 5,
             ),
           ),
